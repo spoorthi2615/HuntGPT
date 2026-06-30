@@ -1,0 +1,119 @@
+[
+  {
+    "technique_id": "T1059.001",
+    "technique_name": "Command and Scripting Interpreter: PowerShell",
+    "procedure_examples": [
+      "Adversaries may use PowerShell to execute malicious commands and payloads.",
+      "An attacker executed a base64 encoded PowerShell script to download a second-stage payload.",
+      "PowerShell was used to bypass execution policies and run an obfuscated script."
+    ]
+  },
+  {
+    "technique_id": "T1018",
+    "technique_name": "Remote System Discovery",
+    "procedure_examples": [
+      "Adversaries may attempt to get a listing of other systems by IP address, hostname, or other logical identifier on a network.",
+      "Ping was used to identify active hosts in the target network range.",
+      "An attacker performed a network sweep to discover accessible servers."
+    ]
+  },
+  {
+    "technique_id": "T1036",
+    "technique_name": "Masquerading",
+    "procedure_examples": [
+      "Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate.",
+      "Malware was named svchost.exe to blend in with legitimate Windows services.",
+      "An attacker dropped a payload in the Temp directory with a randomly generated name."
+    ]
+  },
+  {
+    "technique_id": "T1027",
+    "technique_name": "Obfuscated Files or Information",
+    "procedure_examples": [
+      "Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents.",
+      "A payload was packed with UPX to evade static analysis.",
+      "An attacker used base64 encoding to conceal a malicious script."
+    ]
+  },
+  {
+    "technique_id": "T1059.003",
+    "technique_name": "Command and Scripting Interpreter: Windows Command Shell",
+    "procedure_examples": [
+      "Adversaries may abuse the Windows command shell for execution.",
+      "cmd.exe was used to execute a batch script that disabled local defenses.",
+      "An attacker executed commands via cmd.exe to enumerate local system information."
+    ]
+  },
+  {
+    "technique_id": "T1048",
+    "technique_name": "Exfiltration Over Alternative Protocol",
+    "procedure_examples": [
+      "Adversaries may steal data by exfiltrating it over a different protocol than that of the existing command and control channel.",
+      "Data was exfiltrated over an unencrypted HTTP connection on port 81.",
+      "An attacker transferred sensitive files to an external server using a custom file transfer tool."
+    ]
+  },
+  {
+    "technique_id": "T1059.005",
+    "technique_name": "Command and Scripting Interpreter: Visual Basic",
+    "procedure_examples": [
+      "Adversaries may abuse Visual Basic (VB) for execution.",
+      "A malicious VBScript was executed to download and run a payload.",
+      "cscript.exe was used to execute a script that modified registry keys."
+    ]
+  },
+  {
+    "technique_id": "T1136.001",
+    "technique_name": "Create Account: Local Account",
+    "procedure_examples": [
+      "Adversaries may create a local account to maintain access to victim systems.",
+      "The net user command was used to create a new administrative account.",
+      "An attacker added a newly created user to the local Administrators group."
+    ]
+  },
+  {
+    "technique_id": "T1033",
+    "technique_name": "System Owner/User Discovery",
+    "procedure_examples": [
+      "Adversaries may attempt to identify the primary user, currently logged-in user, set of users that commonly uses a system, or whether a user is actively using the system.",
+      "The whoami command was executed to determine the privileges of the compromised account.",
+      "An attacker used local commands to discover the current logged-on user."
+    ]
+  },
+  {
+    "technique_id": "T1053.005",
+    "technique_name": "Scheduled Task/Job: Scheduled Task",
+    "procedure_examples": [
+      "Adversaries may abuse the Windows Task Scheduler to perform task scheduling for initial or recurring execution of malicious code.",
+      "A scheduled task was created to execute a payload every time the system boots.",
+      "schtasks.exe was used to schedule a reverse shell connection."
+    ]
+  },
+  {
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "procedure_examples": [
+      "Adversaries may interact with the Windows Registry to hide configuration information within Registry keys, remove information as part of cleaning up, or as part of other techniques to aid in persistence and execution.",
+      "Registry keys were modified to disable user prompts and lower security settings.",
+      "An attacker used reg.exe to add a persistence mechanism in the Run key."
+    ]
+  },
+  {
+    "technique_id": "T1016",
+    "technique_name": "System Network Configuration Discovery",
+    "procedure_examples": [
+      "Adversaries may look for details about the network configuration and settings, such as IP and/or MAC addresses, of systems they access or through information discovery of remote systems.",
+      "netstat was used to discover active network connections and listening ports.",
+      "An attacker executed commands to gather the system's IP routing table and DNS settings."
+    ]
+  },
+  {
+    "technique_id": "T1548.002",
+    "technique_name": "Bypass User Account Control",
+    "procedure_examples": [
+      "Adversaries may bypass UAC mechanisms to elevate process privileges on system.",
+      "Event Viewer was abused to bypass UAC and execute a payload with high privileges.",
+      "An attacker modified registry keys associated with eventvwr.exe to launch a command prompt running as Administrator."
+    ]
+  }
+]
